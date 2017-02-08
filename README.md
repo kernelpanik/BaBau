@@ -2,7 +2,7 @@
 Automatic Local Redirection Through Tor
 
 
-Simple bash script for Debian to automate tor/privoxy/iptables configuration in order to get quickly all local traffic routed through Tor.
+Simple bash script for Kali/Debian to automate tor/privoxy/iptables configuration in order to get quickly all local traffic routed through Tor.
 
 It assumes some programs are already installed:
 
@@ -11,11 +11,10 @@ It assumes some programs are already installed:
   - iptables
   - tor
   - privoxy
-  - proxychains
 
 
-There are a few variables you can change.
-Have fun!
+There are a few variables you can change and thins that can be improved.
+Anyway, have fun!
 
 
 The idea is taken from:
