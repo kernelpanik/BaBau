@@ -19,9 +19,8 @@ red='\e[0;31m'
 NC='\e[0m' 
 green='\e[;32m'
 
-#your external IP
-export STOREIP=$(curl -s http://whatismyip.akamai.com/)
-
+#store your external IP in a tmp file
+curl -s http://whatismyip.akamai.com/ > /tmp/myip
 #################################################################################################################
 
 
@@ -255,6 +254,7 @@ CLEANBABAU="
 
 echo "$CLEANBABAU"
 
+rm -rf /tmp/myip 2> /dev/null
 echo -e "\n${green}Restoring Tor config file . . .${NC}"
 if [ -f $TORCONFIGFILE.bk ];
 	then 
@@ -318,7 +318,7 @@ TESTBABAU="
 echo "$TESTBABAU"
 
 echo -en "\n${green}Your old IP address: ${NC}"
-echo "$STOREIP"
+cat /tmp/myip 2> /dev/null
 echo -en "${green}\nYour IP address through TOR: ${NC}"
 curl -s http://whatismyip.akamai.com/
 echo -en "\n\n\n"
