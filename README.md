@@ -13,9 +13,12 @@ It assumes some programs are already installed:
   - privoxy
 
 
-There are a few variables you can change and thins that can be improved.
+There are a few variables you can change and things that can be improved.
 Anyway, have fun!
 
+
+UPDATE
+Now your actual ip address is saved in a temporary file.
 
 The idea is taken from:
 https://trac.torproject.org/projects/tor/wiki/doc/TransparentProxy
