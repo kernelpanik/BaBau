@@ -171,7 +171,7 @@ _dns_port=$(cat /etc/tor/torrc | grep DNSPort | awk '{ print $NF }')
 
 #LAN destinations that shouldn't be routed through Tor
 #Check reserved block.
-_non_tor="127.0.0.0/8 10.0.0.0/8 172.16.0.0/12 192.168.0.0/16 192.168.1.0/16"
+_non_tor="127.0.0.0/8 10.0.0.0/8 172.16.0.0/24 192.168.0.0/24 192.168.1.0/24"
 
 #Other IANA reserved blocks (These are not processed by tor and dropped by default)
 _resv_iana="0.0.0.0/8 100.64.0.0/10 169.254.0.0/16 192.0.0.0/24 192.0.2.0/24 192.88.99.0/24 198.18.0.0/15 198.51.100.0/24 203.0.113.0/24 224.0.0.0/3"
